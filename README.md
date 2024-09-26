@@ -4,6 +4,7 @@ There are a few things I could've done better, such as explicitly setting securi
 I tried to comment sections in the code where I could've done better.
 I also would've organized the Terraform working directory with a modules/ folder and an infrastructure/ folder, and call the modules from the infrastructure folder, unless I'm using repository modules, such as for the VPC creation.
 I am always happy to hear suggestions and where I could've done better! :)
+PS. I was pretty confident in succeeding the bonus task, but the user-data to deploy the agent was giving me a hard time. Due to time limitations I left it out. But be sure I will deploy it outside of this time limitation!
 
 ## Assaf's Home Assignment
 
