@@ -17,12 +17,3 @@ resource "aws_autoscaling_group" "ec2_asg" {
     propagate_at_launch = true
   }
 }
-
-
-
-resource "aws_autoscaling_policy" "scale_up_policy" {
-  name                   = "scale_up_policy"
-  scaling_adjustment      = 1
-  adjustment_type         = "ChangeInCapacity"
-  autoscaling_group_name  = aws_autoscaling_group.ec2_asg.name
-}

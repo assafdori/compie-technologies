@@ -13,5 +13,17 @@ module "vpc" {
   single_nat_gateway = true
   
 
-  tags = merge(local.tags, { Name = "${local.tags.Environment}-vpc" })
+  tags     = merge(local.tags, { Name = "${local.tags.Environment}" })
+
+  vpc_tags = {
+    Name = "compie-vpc"
+  }
+
+  public_subnet_tags = {
+    Name = "compie-public-subnet"
+  }
+
+  private_subnet_tags = {
+    Name = "compie-private-subnet"
+  }
 }

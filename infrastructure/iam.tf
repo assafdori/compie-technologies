@@ -29,7 +29,7 @@ resource "aws_iam_policy" "ec2_policy" {
         "dynamodb:PutItem"
       ],
       Effect   = "Allow",
-      Resource = "*"
+      Resource = "*" # Ideally, this should be the ARN of the DynamoDB table only
     }]
   })
 

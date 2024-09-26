@@ -1,7 +1,7 @@
 ### First we create a dummy secret;
 
 resource "aws_secretsmanager_secret" "db_credentials" {
-  name        = "dbCredentials"
+  name        = "dbCredentials-3"
   description = "Credentials for DynamoDB access"
 }
 
@@ -29,7 +29,7 @@ resource "aws_secretsmanager_secret_policy" "secret_policy" {
           "secretsmanager:GetSecretValue",
           "secretsmanager:DescribeSecret"
         ],
-        Resource: "*"
+        Resource: "*" # This should ideally be the ARN of the secret
       }
     ]
   })

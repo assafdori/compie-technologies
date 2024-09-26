@@ -16,6 +16,9 @@ resource "aws_launch_template" "ec2_template" {
 
   tags = merge(local.tags, { Name = "${local.tags.Environment}-ec2-launch-template" })
 
+
+  user_data = base64encode(file("${path.module}/user-data.sh"))
+
   lifecycle {
     create_before_destroy = true
   }
